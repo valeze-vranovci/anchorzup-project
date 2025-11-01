@@ -1,0 +1,32 @@
+<div class="mb-3">
+    <p-card header="User Purchases Table">
+        <p-table #table [value]="rows" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[5,10,20]"
+            [responsiveLayout]="'scroll'">
+
+            <ng-template pTemplate="header">
+                <tr>
+                    <th *ngFor="let col of tableColumns(rows)">{{ col | titlecase }}</th>
+                </tr>
+                <tr>
+                    <th *ngFor="let col of tableColumns(rows)">
+                        <input pInputText type="text" (input)="table.filter($event.target.value, col, 'contains')"
+                            placeholder="Filter {{ col }}">
+                    </th>
+                </tr>
+            </ng-template>
+
+            <ng-template pTemplate="body" let-row>
+                <tr>
+                    <td *ngFor="let col of tableColumns(rows)" [ngStyle]="{'color': getCellColor(col, row[col])}">
+                        {{ row[col] }}
+                    </td>
+                </tr>
+            </ng-template>
+
+            <ng-template pTemplate="paginatorleft">
+                <button pButton icon="pi pi-refresh" (click)="resetTable(table)"></button>
+            </ng-template>
+
+        </p-table>
+    </p-card>
+</div>

@@ -1,0 +1,22 @@
+<div class="grid ai-center mb-3">
+    <div class="col-12 md-4">
+        <p-date-picker [(ngModel)]="dateRange" (ngModelChange)="onDateChange($event)" selectionMode="range"
+            showIcon="true" placeholder="Select date range">
+        </p-date-picker>
+    </div>
+</div>
+
+<div class="grid mt-3">
+    <div class="col-12 md:col-3" *ngFor="let kpi of kpis">
+        <app-stat-card [widget]="kpi"></app-stat-card>
+    </div>
+</div>
+
+<div class="grid mt-3">
+    <div class="col-12 md:col-6">
+        <app-chart [chartData]="chartData"></app-chart>
+    </div>
+    <div class="col-12 md:col-6">
+        <app-table [rows]="tableData"></app-table>
+    </div>
+</div>

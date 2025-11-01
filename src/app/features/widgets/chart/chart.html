@@ -1,0 +1,18 @@
+<div class="flex align-items-center justify-content-between mb-3">
+    <div>
+        <button pButton label="Bar" class="p-button-outlined mr-2" [ngClass]="{'p-button-raised': chartType === 'bar'}"
+            (click)="changeChartType('bar')">
+        </button>
+        <button pButton label="Line" class="p-button-outlined mr-2"
+            [ngClass]="{'p-button-raised': chartType === 'line'}" (click)="changeChartType('line')">
+        </button>
+        <button pButton label="Pie" class="p-button-outlined mr-2" [ngClass]="{'p-button-raised': chartType === 'pie'}"
+            (click)="changeChartType('pie')">
+        </button>
+    </div>
+    <button pButton label="Download PDF" icon="pi pi-download" (click)="downloadPDF()"></button>
+</div>
+
+<p-card header="Sales Chart">
+    <canvas #chartCanvas width="400" height="200"></canvas>
+</p-card>
