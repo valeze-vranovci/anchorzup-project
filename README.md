@@ -1,59 +1,43 @@
-# AnchorzupProject
+# 📊 Anchorzup Dashboard
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.8.
+A dynamic and interactive dashboard built with **Angular 20**, **PrimeNG**, and **Chart.js**.  
+It features real-time filtering, customizable widgets, date range selection, PDF export, and responsive grid layouts.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Features
 
+- 📅 **Global date range filters** — update all widgets dynamically  
+- 📈 **Interactive charts** (Bar, Line, Pie) with Chart.js  
+- 🧮 **Dynamic KPI cards** with responsive layout  
+- 🧾 **Download dashboard as PDF**  
+- 🧩 **Grid-based widget layout** using Angular Gridster  
+- 🎨 **Modern UI** powered by PrimeNG, PrimeFlex, and PrimeIcons
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Library / Framework |
+|-----------|---------------------|
+| Frontend Framework | [Angular 20](https://angular.dev/) |
+| UI Components | [PrimeNG 20](https://primeng.org/) |
+| Layout Utility | [PrimeFlex 4](https://primeflex.org/) |
+| Icons | [PrimeIcons 7](https://primefaces.org/primeicons/) |
+| Theming | [@primeuix/themes](https://www.npmjs.com/package/@primeuix/themes) |
+| Charts | [Chart.js 4](https://www.chartjs.org/) |
+| PDF Export | [jsPDF 3](https://github.com/parallax/jsPDF) |
+| TypeScript | [TypeScript 5](https://www.typescriptlang.org/) |
+
+---
+
+## ⚙️ Installation & Setup
+
+Follow these steps to set up and run the project locally.
+
+### 1. Clone the repository
 ```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+git clone https://github.com/YOUR_USERNAME/anchorzup-project.git
+cd anchorzup-project
+npm install
+and the last step is to start the project: ng serve or npm start
